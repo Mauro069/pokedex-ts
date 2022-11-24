@@ -1,0 +1,15 @@
+.types {
+  margin-top: 75px;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .type {
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}

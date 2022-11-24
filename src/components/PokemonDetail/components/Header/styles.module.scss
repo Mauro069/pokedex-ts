@@ -1,0 +1,46 @@
+header {
+  position: relative;
+  max-width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    svg {
+      cursor: pointer;
+    }
+
+    svg:hover {
+      transform: scale(1.2);
+      transition-duration: 0.3s;
+    }
+
+    span {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 32px;
+    }
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .pokeball {
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    width: 250px;
+  }
+}

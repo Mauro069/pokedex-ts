@@ -1,0 +1,24 @@
+.stats {
+  margin: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    svg {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
+    p {
+      color: #666666;
+      font-size: 14px;
+    }
+  }
+}

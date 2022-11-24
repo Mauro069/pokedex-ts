@@ -1,0 +1,109 @@
+.ordersContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: visible;
+  font-family: "Poppins";
+  text-transform: capitalize;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+  }
+
+  .orderClose {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    cursor: pointer;
+
+    span {
+      padding-top: 3px;
+    }
+
+    svg {
+      height: 14px;
+      width: 14px;
+
+      path {
+        stroke: #212121;
+      }
+      transition-duration: 0.3s;
+    }
+  }
+
+  .orderOpen {
+    @extend .orderClose;
+
+    svg {
+      transition-duration: 0.3s;
+      transform: rotate(180deg);
+    }
+  }
+
+  .orders {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    width: 100%;
+    max-height: 350px;
+    overflow-y: scroll;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    border: 1px solid #e0e0e0;
+    background: white;
+    margin-top: 38px + 16px;
+
+    .order {
+      cursor: pointer;
+      width: 100%;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 0.5rem 0;
+      position: relative;
+
+      .color {
+        width: 10px;
+        height: 100%;
+
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    .order:hover {
+      font-weight: bold;
+      transition-duration: 0.3s;
+    }
+
+    .order:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .ordersContainer {
+    width: 90vw;
+    max-width: none;
+  }
+}

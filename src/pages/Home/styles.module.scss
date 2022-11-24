@@ -1,0 +1,34 @@
+.home {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+
+  header {
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    div {
+      width: fit-content;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    span {
+      color: #212121;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 700;
+    }
+
+    svg {
+      width: 24px;
+    }
+  }
+}
