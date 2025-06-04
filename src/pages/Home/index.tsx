@@ -33,7 +33,7 @@ export const Home = () => {
         perPage={perPage}
         nextPage={nextPage}
         previousPage={previousPage}
-        maxItems={pokemonsFiltered?.length!}
+        maxItems={pokemonsFiltered?.length ?? 0}
       />
     </div>
   );
