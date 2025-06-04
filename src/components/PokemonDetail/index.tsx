@@ -1,6 +1,8 @@
 import { IPokemon } from "../../interfaces/interfaces";
 import { background } from "../../utils/BackgroundsByType";
 import { Loader } from "../Loader";
+import { useContext } from "react";
+import { TeamContext } from "../../context/TeamContext";
 import { BaseStats } from "./components/BaseStats";
 import { Header } from "./components/Header";
 import { PokeTypes } from "./components/PokeTypes";
@@ -16,6 +18,10 @@ interface Props {
 export const PokemonDetail = ({ pokemon }: Props) => {
   /* @ts-ignore */
   const backgroundSelected = background[pokemon?.types[0]?.type?.name];
+  const { team, addPokemon, removePokemon } = useContext(TeamContext);
+
+  const url = `https://pokeapi.co/api/v2/pokemon/${pokemon?.id}`;
+  const inTeam = team.includes(url);
 
   if (!pokemon) {
     return (
@@ -40,6 +46,12 @@ export const PokemonDetail = ({ pokemon }: Props) => {
           alt={pokemon?.name}
         />
         <PokeTypes pokemon={pokemon} />
+        <button
+          className={styles.teamButton}
+          onClick={() => (inTeam ? removePokemon(url) : addPokemon(url))}
+        >
+          {inTeam ? "Quitar del equipo" : "Agregar al equipo"}
+        </button>
         <Title content="About" backgroundSelected={backgroundSelected} />
         <Stats pokemon={pokemon} />
         <Title content="Base Stats" backgroundSelected={backgroundSelected} />

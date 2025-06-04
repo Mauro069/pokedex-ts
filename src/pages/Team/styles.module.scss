@@ -1,0 +1,41 @@
+.team {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  header {
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .homeLink {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+    }
+
+    .current {
+      font-weight: bold;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .empty {
+    margin-top: 2rem;
+  }
+
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+}

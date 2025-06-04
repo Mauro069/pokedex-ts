@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { PokeballIconSmall } from "../../assets/pokeball";
 import { Filters } from "../../components/Filters";
 import { Pagination } from "../../components/Pagination";
@@ -21,6 +22,9 @@ export const Home = () => {
           <PokeballIconSmall />
           <span>Pokédex</span>
         </div>
+        <Link to="/team" className={styles.teamLink}>
+          Mi Equipo
+        </Link>
       </header>
       <Filters />
       <PokemonList
